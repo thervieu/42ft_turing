@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ocaml_app:
+    image: ocaml/opam:alpine-ocaml-4.12
+    container_name: ocaml_container
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh
+    tty: true
+    stdin_open: true

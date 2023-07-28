@@ -6,6 +6,12 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: sh
+    command:
+      - /bin/sh
+      - -c
+      - |
+        opam install yojson
+        opam install ocamlfind
+        sh
     tty: true
     stdin_open: true
